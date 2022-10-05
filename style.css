@@ -195,16 +195,17 @@ nav ul li a:hover::after{
     border-radius: 10px;
     position: relative;
     overflow: hidden;
+    transition: transform 0.5s;
 }
 .work img{
     width: 100%;
     border-radius: 10px;
     display: block;
-    transition: transform 0.5s;
+    
 }
 .layer{
     width: 100%;
-    height: 100%;
+    height: 0;
     background: linear-gradient(rgba(0,0,0,0.6), #d580ff);
     border-radius: 10px;
     position: absolute;
@@ -218,6 +219,8 @@ nav ul li a:hover::after{
     padding: 0 40px;
     text-align: center;
     font-size: 14px;
+    transition: height 0.5s;
+
 
 }
 
@@ -237,8 +240,99 @@ nav ul li a:hover::after{
     border-radius: 50%;
     text-align: center;
 }
+
 .work:hover img{
     transform: scale(1.1);
 
 }
-.
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #d580ff;
+    padding: 14px 50px;
+    border-radius: 6px;
+    color: #fff;
+    transition: background 0.5s;
+}
+
+.btn:hover{
+    background: #d580ff;
+
+}
+
+/* --------------------contact-------------------- */
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #d580ff;
+    margin-right: 15px;
+    font-size: 25px; 
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #d580ff;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #d580ff;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.copyright i{
+    color: #800080;
+}
+
+/* --------------- css for small screen ------------------  */
+/* @media only screen and (max-with: 600px){
+    #header{
+        background-image: ;
+    }
+} */
